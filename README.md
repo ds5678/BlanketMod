@@ -1,4 +1,4 @@
-﻿# Fur Clothing Mod
+﻿# Blanket Mod
 
 This mod for *The Long Dark* allows you to craft a blanket to stay warmer at night. Requires ModSettings.
 
