@@ -25,12 +25,14 @@ namespace BlanketMod
 				{
 					__instance.m_WeightKG = Settings.options.bedrollWeight;
 					__instance.m_Harvest.m_YieldGearUnits[0] = (int)(Settings.options.bedrollWeight * 10);
+					__instance.m_Harvest.m_DurationMinutes = ((int)(Settings.options.bedrollWeight * 10)) * 10;
 					__instance.m_Bed.m_WarmthBonusCelsius = Settings.options.bedrollWarmth;
 				}
 				if (__instance.name == BLANKET_NAME)
 				{
 					__instance.m_WeightKG = Settings.options.blanketWeight;
 					__instance.m_Harvest.m_YieldGearUnits[0] = (int)(Settings.options.blanketWeight * 10);
+					__instance.m_Harvest.m_DurationMinutes = ((int)(Settings.options.blanketWeight * 10)) * 10;
 				}
 			}
 		}
