@@ -24,11 +24,13 @@ namespace BlanketMod
 				if (__instance.name == BEDROLL_NAME)
 				{
 					__instance.m_WeightKG = Settings.options.bedrollWeight;
+					__instance.m_Harvest.m_YieldGearUnits[0] = (int)(Settings.options.bedrollWeight * 10);
 					__instance.m_Bed.m_WarmthBonusCelsius = Settings.options.bedrollWarmth;
 				}
 				if (__instance.name == BLANKET_NAME)
 				{
 					__instance.m_WeightKG = Settings.options.blanketWeight;
+					__instance.m_Harvest.m_YieldGearUnits[0] = (int)(Settings.options.blanketWeight * 10);
 				}
 			}
 		}
@@ -189,7 +191,27 @@ namespace BlanketMod
 				}
 			}
 		}
-	
+
+		[HarmonyPatch(typeof(Panel_Crafting), "ItemPassesFilter")]
+		private static class UpdateClothRequirements
+		{
+			internal static void Postfix(BlueprintItem bpi)
+			{
+				if (bpi?.m_CraftedResult?.name == BLANKET_NAME )
+				{
+					bpi.m_RequiredGearUnits[0] = (int) (Settings.options.blanketWeight * 10 + 1);
+				}
+				if (bpi?.m_CraftedResult?.name == BEDROLL_NAME && bpi?.m_RequiredGear[0].name == CLOTH_NAME)
+				{
+					bpi.m_RequiredGearUnits[0] = (int) (Settings.options.bedrollWeight * 10 + 2);
+				}
+				if (bpi?.m_CraftedResult?.name == BEDROLL_NAME && bpi?.m_RequiredGear[0].name == BLANKET_NAME)
+				{
+					bpi.m_RequiredGearUnits[0] = (int) ((Settings.options.bedrollWeight / Settings.options.blanketWeight) + 1);
+				}
+			}
+		}
+
 		//Blanket increases Bed Warmth Bonus
 		[HarmonyPatch(typeof(Bed),"GetWarmthBonusCelsius")]
 		private static class BlanketWarmthBonus

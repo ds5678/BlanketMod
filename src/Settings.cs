@@ -6,9 +6,9 @@ namespace BlanketMod
     {
         [Section("Bedroll")]
         [Name("Weight")]
-        [Description("Default is 1 kg. Recommended is 1.5 kg.")]
-        [Slider(0f, 2f, 21)]
-        public float bedrollWeight = 1.5f;
+        [Description("Default is 1 kg. Affects crafting requirements.")]
+        [Slider(0.2f, 2f, 19)]
+        public float bedrollWeight = 1f;
 
         [Name("Warmth Bonus Maximum")]
         [Description("The warmth bonus at 100% bedroll condition. Default is 5 celsius.")]
@@ -17,9 +17,9 @@ namespace BlanketMod
 
         [Section("Blanket")]
         [Name("Weight")]
-        [Description("Recommended is 0.8 kg.")]
-        [Slider(0f, 1.5f, 16)]
-        public float blanketWeight = .8f;
+        [Description("Recommended is 0.6 kg. Affects crafting requirements.")]
+        [Slider(0.2f, 1.5f, 14)]
+        public float blanketWeight = .6f;
 
         [Name("Warmth Bonus")]
         [Description("The additional warmth bonus per blanket carried. Recommended is 1 celsius.")]
