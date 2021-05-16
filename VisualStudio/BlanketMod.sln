@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlanketMod", "BlanketMod.csproj", "{3934D75A-63DE-45CD-976A-E197A0264F5F}"
 EndProject
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {250F37D8-FC70-482E-81CF-7F33B9EC26A4}
+		SolutionGuid = {D3CEA3C2-1416-42B2-B9F9-6919AA3C722F}
 	EndGlobalSection
 EndGlobal

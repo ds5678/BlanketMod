@@ -44,6 +44,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="ModSettings, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -77,9 +78,9 @@
     <Compile Include="src\Patches.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" />
-    <None Include="LICENSE" />
-    <EmbeddedResource Include="res\blanketmod" />
+    <None Include="..\README.md" />
+    <None Include="..\LICENSE" />
+    <None Include="..\.gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -338,3 +338,15 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+
+
+
+
+
+
+Library
+Temp
+Logs
+AssetBundles
+Obj
