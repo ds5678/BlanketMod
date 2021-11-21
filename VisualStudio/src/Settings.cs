@@ -3,8 +3,10 @@ using UnityEngine;
 
 namespace BlanketMod
 {
-	internal class BlanketModSettings : JsonModSettings
+	internal class Settings : JsonModSettings
 	{
+		public static Settings instance = new Settings();
+
 		[Section("Bedroll")]
 		[Name("Weight")]
 		[Description("Default is 1 kg. Affects crafting requirements. Setting takes effect on scene change.")]
@@ -39,19 +41,10 @@ namespace BlanketMod
 		}
 		internal void ChangePrefabWeights()
 		{
-			GetGearItemPrefab("GEAR_BedRoll").m_WeightKG = Settings.options.bedrollWeight;
-			GetGearItemPrefab("GEAR_BedRoll").m_Bed.m_WarmthBonusCelsius = Settings.options.bedrollWarmth;
-			GetGearItemPrefab("GEAR_ClothSheet").m_WeightKG = Settings.options.blanketWeight;
+			GetGearItemPrefab("GEAR_BedRoll").m_WeightKG = Settings.instance.bedrollWeight;
+			GetGearItemPrefab("GEAR_BedRoll").m_Bed.m_WarmthBonusCelsius = Settings.instance.bedrollWarmth;
+			GetGearItemPrefab("GEAR_ClothSheet").m_WeightKG = Settings.instance.blanketWeight;
 		}
 		private static GearItem GetGearItemPrefab(string name) => Resources.Load(name).Cast<GameObject>().GetComponent<GearItem>();
-	}
-	internal static class Settings
-	{
-		public static BlanketModSettings options;
-		public static void OnLoad()
-		{
-			options = new BlanketModSettings();
-			options.AddToModSettings("Blanket Mod Settings");
-		}
 	}
 }

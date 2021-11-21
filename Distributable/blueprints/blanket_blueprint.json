@@ -1,5 +1,5 @@
 {
-    "@type": "ModComponentAPI.ModBlueprint",
+    "Name": "BlanketBlueprint",
     "RequiredGear": ["GEAR_Cloth"],
     "RequiredGearUnits": [10],
     "KeroseneLitersRequired": 0,

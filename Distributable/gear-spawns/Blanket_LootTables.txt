@@ -1,0 +1,22 @@
+#-----------------
+loottable=BackPack
+#-----------------
+item=ClothSheet w=1
+
+
+#--------------------
+loottable=LockerLocked
+#--------------------
+item=ClothSheet w=2
+
+
+#---------------
+loottable=Locker
+#---------------
+item=ClothSheet w=1
+
+
+#-------------------------
+loottable=Wardrobe_regular
+#-------------------------
+item=ClothSheet w=5

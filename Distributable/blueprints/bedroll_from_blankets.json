@@ -1,5 +1,5 @@
 {
-    "@type": "ModComponentAPI.ModBlueprint",
+    "Name": "BedrollFromBlankets",
     "RequiredGear": ["GEAR_ClothSheet"],
     "RequiredGearUnits": [2],
     "KeroseneLitersRequired": 0,
