@@ -1,8 +1,10 @@
 {
     "GAMEPLAY_ClothSheet" : {
-                            "English" : "Patchwork Blanket"
+                            "English" : "Patchwork Blanket",
+                            "Simplified Chinese" : "毯子"
     },
     "GAMEPLAY_ClothSheetDescription" : {
-                            "English" : "An improvised blanket sewn together from scraps of cloth. Will keep you a little warmer on those cold, winter nights."
+                            "English" : "An improvised blanket sewn together from scraps of cloth. Will keep you a little warmer on those cold, winter nights.",
+                            "Simplified Chinese" : "用碎布缝在一起的临时毯子,会让你在寒冷的冬夜温暖一点。"
     }
 }
